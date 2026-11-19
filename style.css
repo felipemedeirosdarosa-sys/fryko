@@ -771,3 +771,191 @@ button {
     color: #A78BFA;
     letter-spacing: 0;
 }
+/* =====================================
+   PLANOS E INVESTIMENTOS
+===================================== */
+
+.pricing {
+    background: var(--bg);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 32px 28px 28px;
+    background: linear-gradient(145deg, #171720, #111117);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(137, 85, 246, 0.65);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card-featured {
+    border-color: rgba(137, 85, 246, 0.55);
+    background: linear-gradient(155deg, rgba(91, 55, 155, 0.2), #14141c 55%);
+}
+
+.pricing-number {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    color: #777582;
+    font-size: 11px;
+}
+
+.pricing-type {
+    min-height: 15px;
+    margin-bottom: 17px;
+    color: var(--purple-light);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.pricing-card h3 {
+    max-width: 90%;
+    min-height: 54px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.pricing-description {
+    min-height: 78px;
+    margin-top: 12px;
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.pricing-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 25px 0 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.pricing-price span {
+    color: var(--gray);
+    font-size: 11px;
+}
+
+.pricing-price strong {
+    color: var(--white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+.pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-features li {
+    position: relative;
+    padding-left: 20px;
+    color: #c4c1ce;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--purple-light);
+    font-weight: 700;
+}
+
+.pricing-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-top: auto;
+    padding: 14px 16px;
+    border: 1px solid rgba(137, 85, 246, 0.55);
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-button span {
+    color: var(--purple-light);
+    font-size: 16px;
+}
+
+.pricing-button:hover {
+    background: var(--purple);
+    border-color: var(--purple);
+}
+
+.pricing-button:hover span {
+    color: #ffffff;
+}
+
+.pricing-note {
+    max-width: 760px;
+    margin: 30px auto 0;
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* RESPONSIVIDADE DOS INVESTIMENTOS */
+
+@media (max-width: 950px) {
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        padding: 29px 25px 25px;
+    }
+
+    .pricing-card h3,
+    .pricing-description {
+        min-height: 0;
+    }
+
+    .pricing-price strong {
+        font-size: 32px;
+    }
+
+}
